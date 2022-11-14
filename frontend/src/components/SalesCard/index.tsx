@@ -1,3 +1,5 @@
+
+import DateSelect from "../DatePicker"
 import "./styles.css"
 
 function SalesCard() {
@@ -6,10 +8,10 @@ function SalesCard() {
             <h2 className="dsmeta-sales-title">Vendas</h2>
             <div>
               <div className="dsmeta-form-control-container">
-                <input className="dsmeta-form-control" type="text"/>
+                <DateSelect/>
               </div>
               <div className="dsmeta-form-control-container">
-                <input className="dsmeta-form-control" type="text"/>
+              <DateSelect/>
               </div>
             </div>
             </div>
