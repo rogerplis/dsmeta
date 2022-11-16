@@ -1,7 +1,7 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./styles.css";
 
 function SalesCard() {
@@ -12,11 +12,13 @@ function SalesCard() {
   const min = new Date(new Date().setDate(max.getDate() - 30));
   
   const [minDate, setMinDate] = useState(min);
-
   const [maxDate, setMaxDate] = useState(max);
+
+ 
   return (
+    <>    
     <div className="dsmeta-card">
-      <h2 className="dsmeta-sales-title">Vendas</h2>
+      <h2 className="dsmeta-sales-title">Vendas</h2>      
       <div>
         <div className="dsmeta-form-control-container">
           <DatePicker
@@ -29,13 +31,17 @@ function SalesCard() {
         <div className="dsmeta-form-control-container">
           <DatePicker
             selected={maxDate}
-            onChange={(date: Date) => setMaxDate(date)}
+            onChange={(date: Date) => setMaxDate(date)}            
             className="dsmeta-form-control"
             dateFormat="dd/MM/yyyy"
-          />
+          />          
         </div>
+        <h1></h1>
       </div>
     </div>
+    </>
   );
+    
+    
 }
 export default SalesCard;
