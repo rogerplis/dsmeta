@@ -5,6 +5,7 @@
 No backend usamos o padrao de projeto RestController:
 
 Com os diretorios:
+
 ![img.png](img.png)
 - Entities: Para as classes de Entidade.
    Nela criamos a classe Sale, que representa as vendas de uma certa empresa.  E colocamos os atributos conforme o banco de dados.
@@ -27,6 +28,7 @@ Com os diretorios:
  
 - Config: Uma classe com configuraçao de segurança para o CORS e autenticação de endpoints
 
+Links para documentação oficial dos recursos utilizados nesse projeto:
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.7.5/maven-plugin/reference/html/)
