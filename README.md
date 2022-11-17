@@ -13,6 +13,8 @@ Tecnologias Usadas:
 | ![vite](https://user-images.githubusercontent.com/54747995/202462969-f61d307e-7e82-421c-acfe-81bfb4f7355b.svg)            	| [Vite]       	|
 | ![twilio](https://user-images.githubusercontent.com/54747995/202486518-6230f3bb-0a7d-4f26-bb0e-8f16ae3bf0ed.png)          	| [twilio]     	|                                                                                                                     	|              	|
 
+## Implementação do [BACKEND].
+## Implementação do [FRONTEND].
 [//]: #
 
 [React.js]: <https://reactjs.org/>
@@ -22,5 +24,7 @@ Tecnologias Usadas:
 [Nodejs]: <https://nodejs.org/>
 [Vite]: <https://vitejs.dev/>
 [twilio]: <https://www.twilio.com/>
+[BACKEND]: <https://github.com/rogerplis/dsmeta/blob/master/backend/HELP.md>
+[FRONTEND]: <>
 
 
