@@ -1,0 +1,44 @@
+export interface Main {
+    content:          Content[];
+    pageable:         Pageable;
+    last:             boolean;
+    totalPages:       number;
+    totalElements:    number;
+    size:             number;
+    number:           number;
+    sort:             Sort;
+    first:            boolean;
+    numberOfElements: number;
+    empty:            boolean;
+}
+
+export interface Content {
+    id:         number;
+    sellerName: SellerName;
+    visited:    number;
+    deals:      number;
+    amount:     number;
+    date:       Date;
+}
+
+export enum SellerName {
+    Anakin = "Anakin",
+    BarryAllen = "Barry Allen",
+    KalEl = "Kal-El",
+    Padme = "Padme",
+}
+
+export interface Pageable {
+    sort:       Sort;
+    offset:     number;
+    pageNumber: number;
+    pageSize:   number;
+    paged:      boolean;
+    unpaged:    boolean;
+}
+
+export interface Sort {
+    empty:    boolean;
+    sorted:   boolean;
+    unsorted: boolean;
+}

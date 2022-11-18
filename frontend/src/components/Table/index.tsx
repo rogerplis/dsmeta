@@ -1,7 +1,18 @@
+import axios from "axios";
+import { useEffect } from "react";
 import NotificationButton from "../NotificationButton";
 import "./styles.css";
 
 function Table() {
+ const datain ='2022-01-01';
+ const datafin ='2022-11-01';
+  useEffect(() => {
+    axios.get( `http://localhost:8080/sales?minDate=${datain}&maxDate=${datafin}`)
+    .then(response => {
+      console.log(response.data)
+    })
+  })
+
   return (
     <div>
       <table className="dsmeta-sales-table">
