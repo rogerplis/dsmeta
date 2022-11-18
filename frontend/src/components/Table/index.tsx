@@ -1,22 +1,28 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Sale } from "../../models/sales";
 import { BASE_URL } from "../../utils/request";
 import NotificationButton from "../NotificationButton";
 import "./styles.css";
 
-function Table() {
- const datain ='2022-01-01';
- const datafin ='2022-11-01';
+export interface Props  {
+  envioData1 : Date, 
+  envioData2 : Date
+}
+ const Table: React.FC<Props> = (envioData1 , envioData2 ) =>
+ {
 
+ const datain = envioData1.envioData1.toLocaleDateString('sv-SE');
+ const datafin =envioData1.envioData2.toLocaleDateString('sv-SE');
+ 
  const [sales, setSales ] = useState<Sale[]>([]);
 
-  useEffect(() => {
+  useEffect(() => {    
     axios.get( `${BASE_URL}/sales?minDate=${datain}&maxDate=${datafin}`)
     .then(response => {
       setSales(response.data.content)
-    })
-  })
+    });
+  },[datain,datafin])
 
   return (
     <div>

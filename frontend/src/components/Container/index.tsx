@@ -10,8 +10,7 @@ function Container() {
     <main>
       <section id="sales">
         <div className="dsmeta-container">
-          <SalesCard />
-          <Table/>
+          <SalesCard />          
         </div>
       </section>
     </main>
