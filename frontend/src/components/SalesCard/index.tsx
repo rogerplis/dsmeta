@@ -1,25 +1,22 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import "./styles.css";
 import Table from "../Table";
 
 import React from 'react';
 
 // import { Container } from './styles';
-interface RefObject{
-  dataIn: (date: Date) => void;
-  dataFin: () => void;
-}
+
 
 const SalesCard: React.FC = () => {
   const max = new Date();
-  const min = new Date(new Date().setDate(max.getDate() - 30));
+  const min = new Date(new Date().setDate(max.getDate() - 365));
 
   const [minDate, setMinDate] = useState(min);
   const [maxDate, setMaxDate] = useState(max);
 
-  const myRef = useRef<RefObject>(null);
+  
 
   const envioData = (date: Date) => setMinDate(date);
   const envioData2 = (date: Date) => setMaxDate(date);

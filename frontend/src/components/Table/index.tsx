@@ -9,7 +9,7 @@ export interface Props  {
   envioData1 : Date, 
   envioData2 : Date
 }
- const Table: React.FC<Props> = (envioData1 , envioData2 ) =>
+ const Table: React.FC<Props> = (envioData1 , _envioData2 ) =>
  {
 
  const datain = envioData1.envioData1.toLocaleDateString('sv-SE');
@@ -51,7 +51,7 @@ export interface Props  {
             <td>{sale.amount}</td>
             <td>
               <div className="dsmeta-red-btn-container">
-                <NotificationButton />
+                <NotificationButton saleId={sale.id} />
               </div>
             </td>
           </tr> 
